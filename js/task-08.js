@@ -9,8 +9,10 @@ function onSubmit(evt) {
 		email: email.value,
 		password: password.value,
 	};
-	!email.value || !password.value
-		? alert('Enter ALL fields!!!')
-		: console.log(userData);
-	evt.currentTarget.reset();
+	if (!email.value || !password.value) {
+		alert('Enter ALL fields!!!');
+	} else {
+		console.log(userData);
+		evt.currentTarget.reset();
+	}
 }
